@@ -1,0 +1,72 @@
+/**********************
+*                     *
+*   Scaffolding       *
+*                     *
+***********************/
+
+* {
+  box-sizing: border-box;
+}
+
+// Compass library
+@import "compass/css3";
+
+body {
+  font-family: $font-family-lato;
+  background-color: $bg-primary;
+  line-height: 1.4em;
+
+  // To facilitate consistent footer positioning
+  min-height: 100vh;
+  position: relative;
+  margin-top: 30px;
+
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset */
+* li {
+  list-style: none;
+}
+
+* ul {
+  margin: 0;
+  padding: 0;
+}
+
+* img {
+  display: block;
+}
+
+* a {
+  text-decoration: none;
+}
+
+//== Containers
+.container {
+  &--center-main{
+    @include center($container-width);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &--full-width {
+    width: 100%;
+  }
+}
+
+// clearfix
+@mixin clearfix() {
+  & {
+    *zoom: 1;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

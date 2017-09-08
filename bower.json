@@ -1,0 +1,20 @@
+{
+  "name": "Monzoor",
+  "description": "Js test for pepper",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Monzoor Morshed Mahmud <mmtamal@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/monzoor/pepper-tab-js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "^3.2.1"
+  }
+}

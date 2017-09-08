@@ -1,0 +1,69 @@
+/**********************
+*                     *
+*   Tab & Accordion   *
+*                     *
+***********************/
+.tab {
+  float: left;
+  @include breakpoint($mobile) {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  &__container {
+    @include clearfix();
+    width: 100%;
+    position: relative;
+  }
+  &__label {
+    &--title {
+      display: block;
+      padding: 20px;
+      background: $gray;
+      margin-right: 1px;
+      color: $dark-gray;
+      font-weight: bold;
+      cursor: pointer;
+      // accordion
+      @include breakpoint($mobile) {
+        margin-bottom: 1px;
+      }
+    }
+  }
+  &--toggle {
+    position: absolute;
+    opacity: 0;
+    &:checked {
+      + .tab__label {
+        .tab__label--title {
+          background: white;
+          color: $light-gray;
+        }
+        .tab__content {
+          visibility: visible;
+          opacity: 1;
+          // accordion
+          @include breakpoint($mobile) {
+            position: relative;
+            top: 0;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  &__content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    padding: 20px;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    // accordion
+    @include breakpoint($mobile) {
+      height: 0;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+/**********************
+*					  *
+*   Variables		  *
+*					  *
+***********************/
+
+/*
+	Colors
+	======
+*/
+
+//== Grayscale
+
+$white:          #ffffff;
+$gray: 		  	   #e2e2e2;
+$dark-gray:      #666666;
+$semi-dark-gray: #9e9e9e;
+$light-gray    : #d4d4d4;
+
+//== Background
+
+$bg-primary:	$white;
+
+/*
+	Typography
+	==========
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+$font-family-lato: 'Lato', sans-serif;
+$baseFontSize : 14;
+
+/*
+	Container
+	==========
+*/
+$container-width: 990px;
+
+/*
+	Media queries
+	=============
+*/
+
+$mobile: max-width 768px;
+$tablet: max-width 992px;
+$desktop: 1200px;

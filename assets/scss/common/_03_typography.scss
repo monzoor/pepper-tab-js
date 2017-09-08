@@ -1,0 +1,14 @@
+/**********************
+*					            *
+*   typography		    *
+*					            *
+***********************/
+
+* h3 {
+  margin-top: 0;
+}
+.text {
+	// color
+	&--dark { color: $dark-gray }
+	&--semi-dark-gray { color: $semi-dark-gray }
+}

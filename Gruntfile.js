@@ -86,6 +86,12 @@ module.exports = function(grunt) {
                   cwd: 'assets/img/',
                   src: ['**'],
                   dest: 'build/img/',
+                },
+                {
+                    expand: true,
+                    cwd: 'assets/demoData/',
+                    src: ['*.json'],
+                    dest: 'build/demoData/'
                 }]
             }
         },
@@ -110,9 +116,16 @@ module.exports = function(grunt) {
                 tasks: ['sass_globbing', 'sass', 'autoprefixer', 'copy']
             },
             js: {
-                files: ['assets/js/**/*.{js}', '*.html'],
-                tasks: ['concat']
+                files: ['assets/js/**/*.js', '*.html'],
+                tasks: ['concat','uglify'],
+                options: {
+                    atBegin: true
+                }
             },
+            json: {
+              files: ['assets/demoData/**/*.json'],
+              tasks: ['copy'],
+            }
         },
 
         // live reload

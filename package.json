@@ -23,5 +23,7 @@
     "jeet": "^7.1.0",
     "sassdown": "0.1.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "grunt-parallel": "^0.5.1"
+  }
 }

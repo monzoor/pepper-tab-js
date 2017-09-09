@@ -38,10 +38,14 @@
         .tab__label--title {
           background: white;
           color: $light-gray;
+          @include breakpoint($mobile) {
+            border-bottom: 1px solid lightgray;
+          }
         }
         .tab__content {
           visibility: visible;
           opacity: 1;
+          padding: 20px;
           // accordion
           @include breakpoint($mobile) {
             position: relative;
@@ -56,7 +60,6 @@
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    padding: 20px;
     top: 56px;
     left: 0;
     width: 100%;

@@ -20,13 +20,13 @@ var url = '/build/demoData/demoData.json';
     }
   })
 
-  var tabContentBuild = function (e) {
+  var tabContentBuild = function (headline, content) {
     // Add p tag if the content has multiple line
-    content = e.content.split('\n'),
+    content = content.split('\n'),
     para = '<p class="text--semi-dark-gray">' + content.join('</p><p class="text--semi-dark-gray">') + '</p>',
     tabContent = '<h3 class="text--dark">{{contentHeadline}}</h3>{{para}}';
 
-    return tabContent = tabContent.replace("{{contentHeadline}}",e.headline).replace("{{para}}",para);
+    return tabContent = tabContent.replace("{{contentHeadline}}",headline).replace("{{para}}",para);
   }
 
   var dataCall =  function (id) {
@@ -42,7 +42,7 @@ var url = '/build/demoData/demoData.json';
         return content.id === id;
       });
       // Create html from the data
-      var renderedContent = tabContentBuild(curentContentData[0]);
+      var renderedContent = tabContentBuild(curentContentData[0].headline, curentContentData[0].content);
 
       // Append html data on the tab content
       $('#tabIndex'+id+' .tab__content').html(renderedContent);

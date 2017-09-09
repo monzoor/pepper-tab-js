@@ -42,6 +42,4 @@ $container-width: 990px;
 	=============
 */
 
-$mobile: max-width 768px;
-$tablet: max-width 992px;
-$desktop: 1200px;
+$wideScreen: min-width 768px;
